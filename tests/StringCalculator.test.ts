@@ -19,4 +19,8 @@ describe("StringCalculator", () => {
         expect(calculator.add("1,2")).toBe(3);
     });
 
+    test("should return the sum of any number of comma-separated numbers", () => {
+        expect(calculator.add("1,2,3,4,5")).toBe(15);
+    });
+
 });
