@@ -31,4 +31,13 @@ describe("StringCalculator", () => {
         expect(calculator.add("//;\n1;2")).toBe(3);
     });
 
+    test("should throw an exception for negative numbers", () => {
+        const input = "1,-2,3,-4";
+
+        try {
+            calculator.add(input);
+        } catch (error: any) {
+            expect(error.message).toBe("negative numbers not allowed: -2, -4");
+        }
+    });
 });
