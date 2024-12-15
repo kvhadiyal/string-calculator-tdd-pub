@@ -26,3 +26,10 @@ export class StringCalculator {
     }
   }
 }
+
+const calculator = new StringCalculator();
+
+console.log(calculator.add("")); // Output: 0
+console.log(calculator.add("1,2,3")); // Output: 6
+console.log(calculator.add("//;\n1;2")); // Output: 3
+console.log(calculator.add("1,-2,3,-4")); // Throws an error
